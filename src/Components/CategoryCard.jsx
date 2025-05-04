@@ -58,9 +58,10 @@ export default function CategoryCard() {
 
   return (
     <>
-      {
+      {fillGaming.length > 0 ? (
           fillGaming.map((game)=>{
               return(
+                <div className='pb-[20px]'>
                     <div
                     key={game.id}
                     className="relative xs:w-[120px]  flex flex-col gap-[50px] w-[150px] rounded-lg shadow-md bg-white">
@@ -80,8 +81,9 @@ export default function CategoryCard() {
                         {game.title}
                     </div>
                     </div>
+                </div>
                 )
-            })
+            })):'لا يوجد كاتوجريزات'
         }
     </>
   );
